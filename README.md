@@ -1,2 +1,3 @@
-# miniCalculator
-Creating a mini-calculator in Python that can add, subtract and multiply.
+#task_generator
+
+Generating math problems for students.
