@@ -1,5 +1,11 @@
+#Objectives
+#Generate a math task that looks like a math operation. Use the requirements above. Print it.
+#Read the answer from a user.
+#Check whether the answer is correct. Print Right! or Wrong!
+
+
 import random
-# write your code here
+
 def add(x, y):
     return x + y
     
@@ -18,12 +24,15 @@ answer = 0
 equation = str(x) + operator + str(y)
 if equation[1] == '+':
     answer = add(x, y)
-if equation[1] == '-':
+elif equation[1] == '-':
     answer = sub(x, y)
-if equation[1] == '*':
+elif equation[1] == '*':
     answer = multiply(x, y)
+else:
+    print('Operator invalid. Please try again.')
+    quit()
 print(' '.join(equation))
-user_answer = input()
+user_answer = int(input())
 
 if user_answer == answer:
     print('Right!')
