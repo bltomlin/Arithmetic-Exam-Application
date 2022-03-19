@@ -1,13 +1,5 @@
 import random
 
-#global variables are declared
-answer = 0                                  #initializes a number to keep track of number  
-                                            #of questions answered corectly
-
-answer_count = 0                            #initializes a count to keep track of 
-                                            #questions asked
-user_answer = 0
-
 #methods that will be used
 
 #adds two numbers
@@ -51,6 +43,7 @@ def difficulty():
                     continue
 
 def simple_ops():
+    answer_count = 0
     for question_count in range(5):             #asks 5 questions
         user_answer = 0
         x = random.randint(2,9)                 #sets variables used in question
@@ -95,6 +88,7 @@ def simple_ops():
     print('Your mark is ' + str(answer_count) + '/5')
 
 def int_squares():
+    answer_count = 0
     for question_count in range(5):             #asks 5 questions
         user_answer = 0
         x = random.randint(11,29) 
@@ -103,7 +97,7 @@ def int_squares():
         answer = multiply(x, x)
         print(equation)
 
-    try:
+        try:
             user_answer = int(input())
         except ValueError:
             while not int(user_answer):         #checks for answer, possible incorrect input
@@ -127,3 +121,4 @@ def int_squares():
     print('Your mark is ' + str(answer_count) + '/5')
 
 
+int_squares()
