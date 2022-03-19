@@ -1,27 +1,37 @@
 import random
 
 #methods that will be used
+
+#adds two numbers
 def add(x, y):
     return x + y
-    
+
+#subtracts two numbers
 def sub(x, y):
     return x - y
     
+#multiplys two numbers
 def multiply(x, y):
     return x * y
 
-#Variables are delcared
-answer = 0
-answer_count = 0
+#variables are declared
+answer = 0                                  #initializes a number to keep track of number  
+                                            #of questions answered corectly
 
-#main
-for question_count in range(5):
+answer_count = 0                            #initializes a count to keep track of 
+                                            #questions asked
+
+#main 
+for question_count in range(5):             #asks 5 questions
     user_answer = 0
-    x = random.randint(2,9)
+    x = random.randint(2,9)                 #sets variables used in question
     y = random.randint(2,9)
-    operator = ['+', '*', '-']
-    operator = random.choice(operator)
-    equation = str(x) + operator + str(y)
+    operator = ['+', '*', '-']      
+    operator = random.choice(operator)      #sets a pseudo-random operator
+    equation = str(x) + operator + str(y)   #sets string for question
+
+
+    #checks answer to problem based on operator
     if equation[1] == '+':
         answer = add(x, y)
     elif equation[1] == '-':
@@ -30,11 +40,12 @@ for question_count in range(5):
         answer = multiply(x, y)
     print(' '.join(equation))
 
+    
     #user inputs the answer
     try:
         user_answer = int(input())
     except ValueError:
-        while not int(user_answer):
+        while not int(user_answer):         #checks for answer, possible incorrect input
             print('Incorrect format.')
             try:
                 user_answer = int(input())
