@@ -50,7 +50,7 @@ def difficulty():
                 except ValueError:
                     continue
 
-def simple_ops(user_answer):
+def simple_ops():
     for question_count in range(5):             #asks 5 questions
         user_answer = 0
         x = random.randint(2,9)                 #sets variables used in question
@@ -94,7 +94,7 @@ def simple_ops(user_answer):
                 print('Wrong!')
     print('Your mark is ' + str(answer_count) + '/5')
 
-def int_squares(user_answer):
+def int_squares():
     for question_count in range(5):             #asks 5 questions
         user_answer = 0
         x = random.randint(11,29) 
