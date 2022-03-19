@@ -94,7 +94,36 @@ def simple_ops(user_answer):
                 print('Wrong!')
     print('Your mark is ' + str(answer_count) + '/5')
 
+def int_squares(user_answer):
+    for question_count in range(5):             #asks 5 questions
+        user_answer = 0
+        x = random.randint(11,29) 
+        equation = str(x)
 
-    
+        answer = multiply(x, x)
+        print(equation)
+
+    try:
+            user_answer = int(input())
+        except ValueError:
+            while not int(user_answer):         #checks for answer, possible incorrect input
+                print('Incorrect format.')
+                try:
+                    user_answer = int(input())
+                except ValueError:
+                    continue
+            if user_answer == answer:
+                print('Right!')
+                answer_count += 1
+            else:
+                print('Wrong')
+        else:
+            #Output of program
+            if user_answer == answer:
+                print('Right!')
+                answer_count += 1
+            else:
+                print('Wrong!')
+    print('Your mark is ' + str(answer_count) + '/5')
 
 
