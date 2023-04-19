@@ -1,7 +1,7 @@
 # **ArithmeticExpert**
 Many people are fond of interactive learning. This application can facilitate solving arithmetic operations in a quick manner. The application will generate a mathematical expression for a user to solve. Implement various levels of difficulty and let the application save the results and show the progress of learning.
 
-## Installation
+# Installation
 
 ```
 # clone the repo
@@ -14,7 +14,7 @@ $ cd ArithmeticExpert/src
 $ python arithmeticexpert.py
 ```
 
-**Example**
+#Example
 ```
 The greater-than symbol followed by a space (> ) represents the user input. Note that it's not part of the input.
 
